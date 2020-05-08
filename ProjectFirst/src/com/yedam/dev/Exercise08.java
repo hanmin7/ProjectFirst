@@ -21,13 +21,13 @@ public class Exercise08 {
 			for(int j = 0; j < array[i].length; j++) {
 				sum += array[i][j];
 			}
-//			avg += array[i].length;
-			avg += sum / array[i].length;
+			avg += array[i].length;
+//			avg += sum / array[i].length;
 		}
 			
 		System.out.println("sum : " + sum);
-		System.out.println("avg : " + avg);
-//		System.out.println("avg : " + (double) sum / avg);
+//		System.out.println("avg : " + avg);
+		System.out.println("avg : " + (double) sum / avg);
 		
 	}
 }
