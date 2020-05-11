@@ -15,6 +15,10 @@ public class Student {
 	Student(String name) {
 		this.name = name;
 	}
+//	public Student(String name, int age) {
+//		this.name = name;
+//		this.age = age;
+//	}
 	
 	//(기능)  ->  메소드
 	void study() {

@@ -21,6 +21,7 @@ public class StudentExample {
 		stu1.eat("사과");
 		
 		Student stu2 = new Student("Choi");
+//		Student stu2 = new Student("Choi", 25); 이렇게 나열가능->생성자에 정의되어있어야함
 		stu2.age = 25;
 		stu2.height = 160.4;
 		stu2.weight = 60.5;
