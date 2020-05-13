@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AccountExample {
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in); //scanner는 읽어오는거 system.in키보드
+		Scanner scn = new Scanner(System.in); //scanner는 읽어오는거 system.in(키보드)
 		Account[] accounts = new Account[100];
 		while(true) { //무한반복하겟다. true 하고 break로 빠져나오면ㅇㅇ
 			System.out.println("-------------------------------");

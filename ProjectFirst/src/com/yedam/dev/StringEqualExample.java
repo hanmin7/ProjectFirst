@@ -1,6 +1,6 @@
 package com.yedam.dev;
 
-class Student{
+class People{
 	String name;
 }
 
