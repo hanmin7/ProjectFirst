@@ -29,7 +29,7 @@ public class ArrayExample {
 		for (int i = 0; i < 10; i++) {
 			intAry3[i] = 5 * (i +1);
 			
-		} 
+		}  
 		//출력
 		for (int i = 0; i < intAry3.length; i++) {
 			System.out.println(intAry3[i]);
