@@ -47,6 +47,9 @@ public class Code0518 {
 			}
 			System.out.println();
 			System.out.println(minValue);
+			
+			
+			
 	
 		
 	}
