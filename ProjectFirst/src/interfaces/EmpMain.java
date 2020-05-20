@@ -2,9 +2,12 @@ package interfaces;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+class Temp extends Exception{
+	Temp(){}
+}
 public class EmpMain {
 	static Scanner scn = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		// 1.입력 2.전체리스트 3.수정 4.삭제 5.종료
 		EmpService service = new EmpServiceImpl();
@@ -17,12 +20,11 @@ public class EmpMain {
 			int menu = 0;
 			try {
 				menu = scn.nextInt();
-			} catch(InputMismatchException e) {
+			} catch (InputMismatchException e) {
 				System.out.println("다시 입력하세요");
 				scn.nextLine();
 			}
-			
-			
+
 			if (menu == 1) {
 				System.out.println("사원번호 입력 : ");
 				int empId = 0;
@@ -31,22 +33,22 @@ public class EmpMain {
 				} catch (InputMismatchException e) {
 					System.out.println("숫자를 입력하세요");
 					scn.nextLine();
-					empId = excute("사원번호 입력: ");
+					empId = excute("사원번호 : ");
 				}
 				scn.nextLine();
-				
+
 				System.out.println("성 입력 : ");
-				
-				String lastName = null;
+
+				String lastName = "";
 				try {
-					lastName = scn.nextLine();
-				} catch (InputMismatchException e) {
-					System.out.println("성을 입력하세요");
-					scn.nextLine();
+//					lastName = scn.nextLine();
 					lastName = excute1("성 입력: ");
+				} catch (Exception e) {
+//					System.out.println("성을 입력하세요");
+//					scn.nextLine();
 				}
 				scn.nextLine();
-				
+
 				System.out.println("급여 입력 : ");
 				int salary = scn.nextInt();
 				scn.nextLine();
@@ -78,12 +80,12 @@ public class EmpMain {
 		} // while
 		System.out.println("프로그램 종료.");
 	}
-	
+
 	public static int excute(String str) {
 		int menu = 0;
-		while(true) {
+		while (true) {
 			System.out.println(str);
-			try{
+			try {
 				scn.nextInt();
 				break;
 			} catch (Exception e) {
@@ -93,20 +95,47 @@ public class EmpMain {
 		}
 		return menu;
 	}
+
+//	public static String excute1(String str) {
+//		String menu = "";
+//		while(true) {
+//			System.out.println(str);
+//			try{
+//				scn.nextLine();
+//				break;
+//			} catch (Exception e) {
+//				System.out.println("다시 입력하세요");
+//				scn.nextLine();
+//			}
+//		}
+//		return menu;
+//	}
+
+	// -----
 	
-	public static String excute1(String str) {
-		String menu = null;
-		while(true) {
-			System.out.println(str);
-			try{
-				scn.nextInt();
+	
+	static String excute1(String req) throws Exception {
+		String string = null;
+		while (true) {
+			try {
+
+				System.out.println(req);
+				string = scn.nextLine();
+				char temp;
+				for (int i = 0; i < string.length(); i++) {
+					temp = string.charAt(i);
+					if (temp >= '0' && temp <= '9') {
+						throw new Temp();
+					}
+				}
 				break;
+
 			} catch (Exception e) {
-				System.out.println("다시 입력하세요");
-				scn.nextLine();
+				e.printStackTrace();
+				System.out.println("잘못된 입력 ");
 			}
 		}
-		return menu;
-	}
-	
+		return string;
+	} // ---
+
 }
