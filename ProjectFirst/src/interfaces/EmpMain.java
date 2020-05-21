@@ -37,7 +37,7 @@ public class EmpMain {
 				}
 				scn.nextLine();
 
-				System.out.println("성 입력 : ");
+//				System.out.println("성 입력 : ");
 
 				String lastName = "";
 				try {
@@ -47,7 +47,7 @@ public class EmpMain {
 //					System.out.println("성을 입력하세요");
 //					scn.nextLine();
 				}
-				scn.nextLine();
+//				scn.nextLine();
 
 				System.out.println("급여 입력 : ");
 				int salary = scn.nextInt();
@@ -131,7 +131,7 @@ public class EmpMain {
 				break;
 
 			} catch (Exception e) {
-				e.printStackTrace();
+//				e.printStackTrace();
 				System.out.println("잘못된 입력 ");
 			}
 		}
