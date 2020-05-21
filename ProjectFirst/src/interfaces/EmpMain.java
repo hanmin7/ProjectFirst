@@ -137,5 +137,9 @@ public class EmpMain {
 		}
 		return string;
 	} // ---
+	
+//	입사일
+//	charAt(4) == '/'
+//	Integer.parseInt(r.substring(0,4))
 
 }
