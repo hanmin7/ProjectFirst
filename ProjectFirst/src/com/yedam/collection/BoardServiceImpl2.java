@@ -1,17 +1,18 @@
 package com.yedam.collection;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class BoardServiceImpl implements BoardService {
+public class BoardServiceImpl2 implements BoardService2{
+	List<Board> list = new ArrayList<>();
 
 	@Override
-	public void insert(List<Board> list, Board board) {
+	public void insert(Board board) {
 		list.add(board);
-
 	}
 
 	@Override
-	public void update(List<Board> list, Board board) {
+	public void update(Board board) {
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getTitle().equals(board.getTitle())) {
 				list.get(i).setContents(board.getContents()); //어떨 때 겟? 셋?
@@ -20,7 +21,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public void delete(List<Board> list, String title) {
+	public void delete(String title) {
 		for(int i=0; i<list.size(); i++) {
 			if (list.get(i).getTitle().equals(title)) {
 				list.remove(i);
@@ -29,9 +30,10 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public void show(List<Board> list) {
+	public void show() {
 		for(Board board : list) {
 			System.out.println(board.toString());
 		}
 	}
+	
 }

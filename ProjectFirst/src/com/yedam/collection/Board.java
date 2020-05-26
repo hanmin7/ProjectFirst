@@ -5,7 +5,7 @@ public class Board {
 	private String title;
 	private String contents;
 	
-	Board(String name, String title, String contents) {
+	Board(String title, String contents, String name) {
 		this.name = name;
 		this.title = title;
 		this.contents = contents;
@@ -33,6 +33,11 @@ public class Board {
 
 	public void setContents(String contents) {
 		this.contents = contents;
+	}
+
+	@Override
+	public String toString() {
+		return "제목: " + title + ", " + "내용: " + contents + ", " +"작성자: " + name;
 	}
 	
 	
