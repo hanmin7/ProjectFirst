@@ -1,5 +1,6 @@
 package com.yedam.classes.morning;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BaseBall1 {
@@ -54,7 +55,7 @@ public class BaseBall1 {
 				System.out.println("----------------------아웃");
 			}
 			
-			System.out.println("[" + user[0] + ", " + user[1] + ", " + user[2] + "] 스트라이크: " + strike + " 볼: " + ball);
+			System.out.println( Arrays.toString(user) + " 스트라이크: " + strike + " 볼: " + ball);
 			System.out.println();
 
 			count++;
